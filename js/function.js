@@ -97,7 +97,7 @@ function MoveDown(){
 
   setTimeout(() => {
     fillGrid();
-  }, 100);
+  }, 150);
 }
 
 
@@ -126,7 +126,7 @@ function fillGrid(){
     // for(let k = 0; k = itemEls.length; k++){
     let x = Math.floor(k / 8);
     let y = Math.floor(k % 8);
-    if(itemsArray[x][y].firstChild == null){
+    if(itemsArray[x][y].firstChild === null){
       breadId = Math.floor(Math.random() * breads.length);
       itemsArray[x][y].className = `item ${breads[breadId]}`;
       itemsArray[x][y].innerHTML = `<img src="./assets/${breadSrc[breadId]}"></img>`;
