@@ -1,0 +1,67 @@
+body {width: 100vw; height: 100vh; background-color: #555; display: flex; justify-content: center; align-items: center; background-color: #e5d7bd; position: relative; overflow:hidden;}
+div.bg > img:first-child { width: 100%; position: absolute; bottom:0px; left: 0;}
+div.bg > img:nth-child(2) { width: 100%; position: absolute; bottom:0px; left: 0;}
+div.bg > img:nth-child(3) { width: 100%; position: absolute; bottom:0px; left: 0;}
+
+div.game-board {min-width: 700px; min-height: 700px; position: relative; padding: 20px;  border-radius: 8px; background: url('../assets/game-board.svg') no-repeat center; }
+div.board-items {width: 660px; height: 660px; overflow-y:hidden;}
+
+div.panel > h1.logo {position: relative; margin: 20px 0 50px;}
+div.panel > h1.logo > span {font-family: var(--vampiro);font-size: 45px; display: flex; flex-direction: column; align-items: center; line-height: 0.8em;  color: #906135; -webkit-text-stroke: 1px #fff2cf; position: relative; z-index: 1;}
+div.panel > h1.logo > span > em {font-size: 55px; color: #904a09;}
+div.panel > h1.logo > span:last-child { font-size: 60px; color: #904a09; }
+h1.logo > img.logo-orange {position: absolute; bottom: 0; left: 0; width: 80px; transform: translate(-50%, 30%);}
+h1.logo > img.logo-leaves {position: absolute; top: 0; right: 0; width: 60px; transform: translate(60% ,20%);}
+
+
+div.panel {position: absolute; top: 0; left: -240px; height: 100%; width: 200px; display: flex; flex-direction: column; align-items: center;}
+div.timer-panel,
+div.score-panel {width: 100%; height: 150px; background-color: #fbefe2; border: 2px solid #b56743; border-radius: 20px; overflow: hidden; text-align: center;margin-bottom: 30px;}
+
+div.panel-title {width: 100%; height: 25%; background-color: #ffb909; border-bottom: 2px solid #904a09; text-align: center; display: flex; justify-content: space-between;align-items:center; font-size: 20px; color: #904a09;padding: 0 15px;}
+
+div.dot {width: 5px; height: 5px; background-color: #904a09; border-radius: 50%;}
+
+div.count-area {height: 75%; display: flex; justify-content: center; align-items: center; position: relative;}
+div.count-area > div.dot:first-child,
+div.count-area > div.dot:nth-child(3) {position: absolute; bottom: 15px; left: 15px;}
+div.count-area > div.dot:nth-child(2),
+div.count-area > div.dot:last-child {position: absolute; bottom: 15px; right: 15px;}
+span.time-count, span.score-count {font-size: 60px; font-weight: 700; color: #4d4d4d; }
+
+div.item {position: absolute; top: 0; left: 0; width: 60px; height: 60px; display: flex; justify-content:center; align-items: center; cursor: pointer; 
+    transition:.3s ; 
+}
+div.item img {width: 90%;}
+
+div.grid-bg > div.sell {width: 70px; height: 70px; background-color: #ffdcb4; border-radius: 20px; position: absolute; top: 0; left: 0;}
+
+span.ooz {position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-size: 20px; font-weight: 700; color: #ffffff80;}
+
+.select {animation: select .3s linear infinite alternate;}
+/* 
+@keyframes startDown {
+    0% {transform: translateY(-660px); opacity:0;}
+    60% {opacity:0;}
+    80% {transform: translateY(0); opacity: 1;}
+    90% {transform: translateY(-10px); opacity: 1;}
+    100% {transform: translateY(0); opacity: 1;}
+} */
+@keyframes select{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.1);}
+}
+
+
+#pang {animation:Pang .4s cubic-bezier(.38,-0.89,.67,1.79)}
+@keyframes Pang {
+    0% {transform: scale(1); opacity: 1;}
+    50% {transform: scale(0.7); opacity: 0;}
+    100% {transform: scale(1); opacity: 0;}
+}
+
+#new {opacity: 0; animation: New .3s cubic-bezier(.38,-0.89,.67,1.79) forwards;}
+@keyframes New {
+    0% {transform: translateY(-50%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
